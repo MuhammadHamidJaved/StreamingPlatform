@@ -4,6 +4,7 @@ import { fetchMoviesByGenre, Movie } from '../../../../api/tmdbApi';
 import GenreSection from '../../../../components/GenreMovies'; 
 import Pagination from '../../../../components/CustomPagination/CustomPagination'; 
 import '../../../../styles/Movie.css'; 
+import Loader from '@/components/Loader';
 
 interface GenreMoviesProps {
   params: { genreId: string, genreName: string }; 
@@ -42,7 +43,7 @@ const GenreMovies: React.FC<GenreMoviesProps> = ({ params }) => {
           <Pagination page={page} setPage={setPage} totalPages={totalPages} />
         </>
       ) : (
-        <p>Loading movies...</p>
+        <Loader />
       )}
     </div>
   );
