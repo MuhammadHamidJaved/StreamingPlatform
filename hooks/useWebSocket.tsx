@@ -32,8 +32,6 @@ const useWebSocket = <T,>(url: string) => {
     const sendMessage = (message: T) => {
         if (socketRef.current?.readyState === WebSocket.OPEN) {
             socketRef.current.send(JSON.stringify(message));
-            //send form data
-            // socketRef.current.send(message as unknown as string);
         } else {
             console.error('WebSocket is not open');
         }

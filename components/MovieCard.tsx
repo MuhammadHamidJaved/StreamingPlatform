@@ -1,5 +1,4 @@
 // components/MovieCard.tsx
-import { Color } from 'antd/es/color-picker';
 import Link from 'next/link';
 
 interface MovieCardProps {

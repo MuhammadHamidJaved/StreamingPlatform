@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import '../styles/auth.css'; 
 import { FaFacebookF, FaGooglePlusG, FaLinkedinIn } from 'react-icons/fa';
 import axios from 'axios';
-// import { useSessionA } from '../components/Context/SessionContext';
 
 const Signup = () => {
-  // const { setSession } = useSessionA();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setName] = useState('');
@@ -43,7 +41,6 @@ const Signup = () => {
       // Handle successful response
       if (response.status === 201) {
         setSuccess('Signup successful! You can now log in.');
-        // setSession(response.data); // Assuming your backend sends session data
       }
     } catch (err: any) {
       // Handle errors from the backend

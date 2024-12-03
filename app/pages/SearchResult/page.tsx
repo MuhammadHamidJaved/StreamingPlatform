@@ -8,7 +8,6 @@ import Loader from '../../../components/Loader'; // Import the Loader component
 import '../../../styles/Movie.css'; // Import CSS for styling
 
 const SearchResultsPage: React.FC = () => {
-  const router = useRouter(); // Next.js router for navigation
   const searchParams = useSearchParams(); // Get query parameters from the URL
   const query = searchParams.get('query'); // Retrieve the 'query' parameter
 
